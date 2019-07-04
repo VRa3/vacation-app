@@ -1,6 +1,7 @@
 import React from 'react';
 import AvatarBox from './AvatarBox/'
 import InputBox from './InputBox/'
+import ConfirmationBox from './ConfirmationBox/'
 import { Route, Switch } from 'react-router-dom'
 import {
     CSSTransition,
@@ -37,6 +38,10 @@ class BaseBox extends React.Component {
                                                 <Route
                                                     path="/name"
                                                     component={InputBox}
+                                                />
+                                                <Route
+                                                    path="/confirm"
+                                                    component={ConfirmationBox}
                                                 />
                                             </Switch>
                                         )}
