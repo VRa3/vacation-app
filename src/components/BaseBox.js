@@ -13,7 +13,6 @@ class BaseBox extends React.Component {
         this.setState({gender: element.props.genderName})
     };
 
-
     render() {
 
         const AvatarsList = () => {
@@ -37,7 +36,9 @@ class BaseBox extends React.Component {
 
         return (
             <section className='base-box'>
-                Hello iam Base box
+                <h5 className="section-title">
+                    Choose your avatar
+                </h5>
 
                 <div className='d-flex justify-content-around'>
                     {AvatarsList()}
