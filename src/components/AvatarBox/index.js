@@ -37,7 +37,7 @@ class AvatarBox extends React.Component {
         };
 
         return (
-            <>
+            <div className='page'>
                 <h5 className="section-title">
                     Choose your avatar
                 </h5>
@@ -47,7 +47,7 @@ class AvatarBox extends React.Component {
                 </div>
 
                 <Link to="/name">Next</Link>
-            </>
+            </div>
         )
     }
 }

@@ -1,8 +1,9 @@
 @import 'vendor/Bootstrap_4.3.1/scss/bootstrap';
 
 @import 'abstracts/_functions',
-        'abstracts/_variables',
-        'abstracts/_helpers';
+        'abstracts/_helpers',
+        'abstracts/_page-transitions',
+        'abstracts/_variables';
 
 @import 'base/_base',
         'base/_typo';

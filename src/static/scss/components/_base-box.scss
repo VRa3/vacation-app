@@ -1,6 +1,5 @@
 .base-box {
-  margin-top: $spacing-base;
-  border-radius: $border-radius-base;
-  padding: $spacing-base;
-  background: $white;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
