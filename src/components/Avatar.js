@@ -5,7 +5,7 @@ class Avatar extends React.Component {
     render() {
         return (
             <div className="avatar">
-                <img className='avatar__img' src={this.props.gender} alt=""/>
+                <img className='avatar__img' src={this.props.image} alt=""/>
             </div>
         )
     }

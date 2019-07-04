@@ -16,8 +16,8 @@ class BaseBox extends React.Component {
                 Hello iam Base box
 
                 <div className='d-flex justify-content-around'>
-                    <Avatar gender={Woman}/>
-                    <Avatar gender={Man}/>
+                    <Avatar genderName='Woman' image={Woman}/>
+                    <Avatar genderName='Man' image={Man}/>
                 </div>
             </section>
         )
