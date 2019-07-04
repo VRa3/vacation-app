@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../Navigation/'
 import { Link } from 'react-router-dom'
 
 class nameBox extends React.Component {
@@ -6,7 +7,7 @@ class nameBox extends React.Component {
 
         return (
             <div className='page'>
-                <h5 className="section-title section-title--mb-big">
+                <h5 className="section-title">
                     What's your name?
                 </h5>
 
@@ -14,8 +15,10 @@ class nameBox extends React.Component {
                     <input type="text"/>
                 </div>
 
-                <Link to="/">Back</Link>
-                <Link to="/confirm">Confirm</Link>
+                <Navigation>
+                    <Link to="/">Back</Link>
+                    <Link to="/confirm">Confirm</Link>
+                </Navigation>
             </div>
         )
     }

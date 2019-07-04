@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../Navigation/'
 import Avatar from '../Avatar'
 import Woman from '../../static/images/woman.svg'
 import Man from '../../static/images/man.svg'
@@ -42,11 +43,13 @@ class AvatarBox extends React.Component {
                     Choose your avatar
                 </h5>
 
-                <div className='d-flex justify-content-around'>
+                <div className='avatars-wrapper d-flex justify-content-around'>
                     {AvatarsList()}
                 </div>
 
-                <Link to="/name">Next</Link>
+                <Navigation>
+                    <Link to="/name">Next</Link>
+                </Navigation>
             </div>
         )
     }
