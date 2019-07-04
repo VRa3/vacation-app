@@ -1,0 +1,90 @@
+//   Colors  //
+//      '   //
+//     '   //
+//    \/  //
+
+$colors: (
+        dark: (
+                base: rgb(0, 0, 0),
+                medium: rgb(54, 54, 54),
+                light: rgb(75, 75, 75),
+                grayish: rgb(88, 88, 88),
+                light-gray: rgb(125, 125, 125),
+                very-light: rgb(140, 140, 140),
+        ),
+        light: (
+                base: rgb(250, 251, 252),
+                creamy: rgb(238, 238, 238),
+                grayish: rgb(188, 188, 188),
+        ),
+        custom: (
+                facebook: rgb(97, 143, 239),
+                g-plus: rgb(235, 104, 104),
+                positive: rgb(161, 223, 127),
+                sandy: rgb(255, 253, 188),
+        )
+);
+@function setColor($scheme, $tone: base) {
+  @return map-get(map-get($colors, $scheme), $tone);
+}
+
+// Font weights //
+//      '      //
+//     '      //
+//    \/     //
+
+$weights: (
+        light: 300,
+        regular: 400,
+        medium: 500,
+        bold: 700,
+        black: 900
+);
+@function setWeight($weight: regular) {
+  @return map-get($weights, $weight);
+}
+
+// Variables //
+//      '   //
+//     '   //
+//    \/  //
+
+
+// COLORS
+
+
+$background-color: setColor(light, creamy);
+
+$white: #fff;
+$black: #000;
+
+
+$color-primary: setColor(light, grayish);
+$color-dark: setColor(dark, medium);
+
+$color-positive: setColor(custom, positive);
+$color-danger: setColor(custom, g-plus);
+
+$color-highlight: setColor(custom, sandy);
+
+
+// FONTS related
+
+
+$font-size-base: 14px;
+
+$font-size-small: ($font-size-base - 4px);
+
+$font-size-title: ($font-size-base + 4px);
+
+$font-size-big-heading: 26px;
+
+$font-weight-bold: setWeight(bold);
+
+
+// SIZINGS
+
+$border-radius-base: 6px;
+
+$spacing-base: 15px;
+

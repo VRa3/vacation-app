@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #UTILS / FUNCTIONS
+\*------------------------------------*/
+
+
+/// Convert pixels to rems
+///
+/// $baseSize - base html size used
+/// $targetSize - enter in px
+///
+/// @example SCSS - usage
+/// p { font-size: rem(60px) }
+///
+/// @example CSS - output
+/// p { font-size: 3.75rem }
+
+@function rem($targetSize) {
+  $baseSize: 16px;
+  @return ($targetSize / $baseSize) * 1rem;
+}

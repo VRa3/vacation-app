@@ -1,0 +1,20 @@
+$avatar-size: 100px;
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  width: $avatar-size;
+  height: $avatar-size;
+
+  &__img {
+    width: $avatar-size - 40px;
+    height: auto;
+  }
+
+  &--selected {
+    border: 3px solid setColor(custom, positive);
+  }
+}
