@@ -2,6 +2,8 @@ import React from 'react';
 import Avatar from '../Avatar'
 import Woman from '../../static/images/woman.svg'
 import Man from '../../static/images/man.svg'
+import { Link } from 'react-router-dom'
+
 
 class AvatarBox extends React.Component {
     state = {
@@ -43,6 +45,8 @@ class AvatarBox extends React.Component {
                 <div className='d-flex justify-content-around'>
                     {AvatarsList()}
                 </div>
+
+                <Link to="/name">Next</Link>
             </>
         )
     }

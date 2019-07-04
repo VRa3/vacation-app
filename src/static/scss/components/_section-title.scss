@@ -1,3 +1,7 @@
 .section-title {
   text-align: center;
+
+  &--mb-big {
+    margin-bottom: 30px;
+  }
 }
