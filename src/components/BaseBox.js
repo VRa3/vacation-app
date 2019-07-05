@@ -9,6 +9,19 @@ import {
 } from 'react-transition-group';
 
 class BaseBox extends React.Component {
+    state = {
+        userGender: '',
+        userName: '',
+    };
+
+    setUserGender = data => {
+        this.setState({userGender: data})
+    };
+
+    setUserName = data => {
+        this.setState({userName: data})
+    };
+
     render() {
 
         return (
@@ -33,15 +46,17 @@ class BaseBox extends React.Component {
                                                 <Route
                                                     exact
                                                     path="/"
-                                                    component={AvatarBox}
+                                                    render={()=> <AvatarBox sendUserData={this.setUserGender}/>}
                                                 />
                                                 <Route
                                                     path="/name"
-                                                    component={InputBox}
+                                                    render={()=> <InputBox sendUserData={this.setUserName}/>}
+
                                                 />
                                                 <Route
                                                     path="/confirm"
-                                                    component={ConfirmationBox}
+                                                    render={()=> <ConfirmationBox name={this.state.userName} gender={this.state.userGender}/>}
+
                                                 />
                                             </Switch>
                                         )}

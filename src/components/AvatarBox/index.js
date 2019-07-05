@@ -9,15 +9,17 @@ import { Link } from 'react-router-dom'
 class AvatarBox extends React.Component {
     state = {
         gender: '',
-        name: '',
     };
 
     handleClick = (element) => {
         this.setState({gender: element.props.genderName})
     };
 
-    render() {
+    sendUserData = () => {
+      this.props.sendUserData(this.state.gender);
+    };
 
+    render() {
         const AvatarsList = () => {
             const arr = [
                 ['Woman', Woman],
@@ -48,7 +50,7 @@ class AvatarBox extends React.Component {
                 </div>
 
                 <Navigation>
-                    <Link to="/name">Next</Link>
+                    <Link onClick={this.sendUserData} className="ml-auto" to="/name">Next</Link>
                 </Navigation>
             </div>
         )

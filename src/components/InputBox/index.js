@@ -3,6 +3,18 @@ import Navigation from '../Navigation/'
 import { Link } from 'react-router-dom'
 
 class nameBox extends React.Component {
+    state = {
+        name: ''
+    };
+
+    handleChange = (e) => {
+        this.setState({name: e.target.value})
+    };
+
+    sendUserData = () => {
+        this.props.sendUserData(this.state.name);
+    };
+
     render() {
 
         return (
@@ -12,12 +24,12 @@ class nameBox extends React.Component {
                 </h5>
 
                 <div className='d-flex justify-content-around'>
-                    <input type="text"/>
+                    <input onChange={this.handleChange} type="text"/>
                 </div>
 
                 <Navigation>
                     <Link to="/">Back</Link>
-                    <Link to="/confirm">Confirm</Link>
+                    <Link onClick={this.sendUserData} to="/confirm">Next</Link>
                 </Navigation>
             </div>
         )
