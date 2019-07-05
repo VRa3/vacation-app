@@ -32,9 +32,7 @@ class BaseBox extends React.Component {
         console.log(this.state);
 
         const showErrorBox = () => {
-            if (this.state.errorType === 1) {
-                return <ErrorBox/>
-            }
+            return this.state.errorType !== 0 ? <ErrorBox errorType={this.state.errorType} /> : ''
         };
 
         return (

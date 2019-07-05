@@ -3,6 +3,8 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  padding: $spacing-base;
   width: 75%;
-  background: setColor(custom, g-plus);
+  background: rgba(setColor(custom, g-plus), 0.8);
+  color: $white;
 }
