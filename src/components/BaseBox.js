@@ -10,9 +10,16 @@ import {
 } from 'react-transition-group';
 
 class BaseBox extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.timeout = null;
+    }
+
     state = {
         userGender: '',
         userName: '',
+        showError: false,
         errorType: 0
     };
 
@@ -25,14 +32,40 @@ class BaseBox extends React.Component {
     };
 
     checkErrors = data => {
-      this.setState({errorType: data})
+        this.setState({
+            errorType: data,
+        });
+
+        if (data !== 0) {
+            this.setState({
+                    showError: true
+                }, () => {
+                if (this.timeout) {
+                    clearTimeout(this.timeout);
+
+                    this.timeout = setTimeout(() => {
+                        this.setState({showError: false})
+                    }, 4000)
+                } else {
+                    this.timeout = setTimeout(() => {
+                        this.setState({showError: false})
+                    }, 4000)
+                }
+            });
+        }
     };
 
     render() {
         console.log(this.state);
 
         const showErrorBox = () => {
-            return this.state.errorType !== 0 ? <ErrorBox errorType={this.state.errorType} /> : null
+            const {errorType, showError} = this.state;
+
+            if (errorType !== 0 && showError) {
+                return <ErrorBox showError={showError} errorType={errorType} />
+            } else {
+                return null;
+            }
         };
 
         return (
@@ -62,12 +95,10 @@ class BaseBox extends React.Component {
                                                 <Route
                                                     path="/name"
                                                     render={()=> <InputBox checkErrors={this.checkErrors} sendUserData={this.setUserName}/>}
-
                                                 />
                                                 <Route
                                                     path="/confirm"
                                                     render={()=> <ConfirmationBox name={this.state.userName} gender={this.state.userGender}/>}
-
                                                 />
                                             </Switch>
                                         )}
