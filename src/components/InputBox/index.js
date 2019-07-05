@@ -7,12 +7,22 @@ class nameBox extends React.Component {
         name: ''
     };
 
-    handleChange = (e) => {
+    handleChange = e => {
         this.setState({name: e.target.value})
     };
 
-    sendUserData = () => {
-        this.props.sendUserData(this.state.name);
+    sendUserData = e => {
+        const {name} = this.state;
+        const {sendUserData, checkErrors} = this.props;
+
+        sendUserData(name);
+
+        if (name === '') {
+            e.preventDefault();
+            checkErrors(2);
+        } else {
+            checkErrors(0);
+        }
     };
 
     render() {
