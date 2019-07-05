@@ -2,9 +2,9 @@
   position: fixed;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
   padding: $spacing-base;
   width: 75%;
   background: rgba(setColor(custom, g-plus), 0.8);
   color: $white;
+  animation: slideUp 1s forwards, slideDown 1s 3s forwards;
 }

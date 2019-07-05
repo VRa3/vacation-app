@@ -79,9 +79,7 @@ class BaseBox extends React.Component {
                     }
                 />
 
-                <div>
-                    {showErrorBox()}
-                </div>
+                {showErrorBox()}
             </section>
         )
     }

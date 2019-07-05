@@ -1,13 +1,17 @@
 import React from 'react';
 
 class ErrorBox extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.errorBoxRef = React.createRef();
+    }
+
     render() {
         let message = 'error';
 
         const checkError = () => {
             const error = this.props.errorType;
-
-            console.log(this.props);
 
             switch(error) {
                 case 1:
@@ -23,9 +27,11 @@ class ErrorBox extends React.Component {
         checkError();
 
         return (
-            <div className='error-box'>
-                {message}
-            </div>
+            <>
+                <div ref={this.errorBoxRef} className='error-box'>
+                    {message}
+                </div>
+            </>
         )
     }
 }
