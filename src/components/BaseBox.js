@@ -2,6 +2,7 @@ import React from 'react';
 import AvatarBox from './AvatarBox/'
 import InputBox from './InputBox/'
 import ConfirmationBox from './ConfirmationBox/'
+import ErrorBox from './ErrorBox'
 import { Route, Switch } from 'react-router-dom'
 import {
     CSSTransition,
@@ -12,6 +13,7 @@ class BaseBox extends React.Component {
     state = {
         userGender: '',
         userName: '',
+        errorType: 0
     };
 
     setUserGender = data => {
@@ -22,7 +24,18 @@ class BaseBox extends React.Component {
         this.setState({userName: data})
     };
 
+    checkErrors = data => {
+      this.setState({errorType: data})
+    };
+
     render() {
+        console.log(this.state);
+
+        const showErrorBox = () => {
+            if (this.state.errorType === 1) {
+                return <ErrorBox/>
+            }
+        };
 
         return (
             <section className='base-box'>
@@ -46,11 +59,11 @@ class BaseBox extends React.Component {
                                                 <Route
                                                     exact
                                                     path="/"
-                                                    render={()=> <AvatarBox sendUserData={this.setUserGender}/>}
+                                                    render={()=> <AvatarBox checkErrors={this.checkErrors} sendUserData={this.setUserGender}/>}
                                                 />
                                                 <Route
                                                     path="/name"
-                                                    render={()=> <InputBox sendUserData={this.setUserName}/>}
+                                                    render={()=> <InputBox checkErrors={this.checkErrors} sendUserData={this.setUserName}/>}
 
                                                 />
                                                 <Route
@@ -67,6 +80,10 @@ class BaseBox extends React.Component {
                     }
                     }
                 />
+
+                <div>
+                    {showErrorBox()}
+                </div>
             </section>
         )
     }

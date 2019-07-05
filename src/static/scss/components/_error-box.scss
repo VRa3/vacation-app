@@ -1,0 +1,8 @@
+.error-box {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  background: setColor(custom, g-plus);
+}

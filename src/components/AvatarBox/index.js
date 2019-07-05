@@ -15,8 +15,18 @@ class AvatarBox extends React.Component {
         this.setState({gender: element.props.genderName})
     };
 
-    sendUserData = () => {
-      this.props.sendUserData(this.state.gender);
+    sendUserData = e => {
+        const {gender} = this.state;
+        const {sendUserData, checkErrors} = this.props;
+
+        sendUserData(gender);
+
+        if (gender === '') {
+            e.preventDefault();
+            checkErrors(1);
+        } else {
+            checkErrors(0);
+        }
     };
 
     render() {

@@ -24,7 +24,7 @@ class nameBox extends React.Component {
                 </h5>
 
                 <div className='d-flex justify-content-around'>
-                    <input onChange={this.handleChange} type="text"/>
+                    <input className='form-control rounded-0 w-75' onChange={this.handleChange} type="text"/>
                 </div>
 
                 <Navigation>
