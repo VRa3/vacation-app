@@ -16,9 +16,18 @@ $avatar-size: 100px;
   &__img {
     width: $avatar-size - 40px;
     height: auto;
+
+    .avatar--minimized & {
+      width: 30px;
+    }
   }
 
   &--selected {
     border: 3px solid setColor(custom, positive);
+  }
+
+  &--minimized {
+    width: $avatar-size / 2;
+    height: $avatar-size / 2;
   }
 }

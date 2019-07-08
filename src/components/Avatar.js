@@ -14,6 +14,8 @@ class Avatar extends React.Component {
         const classHandler = () => {
           if (this.props.isSelected) {
               avatarClass += ' avatar--selected'
+          } else if (this.props.minimized) {
+              avatarClass += ' avatar--minimized'
           }
         };
         classHandler();

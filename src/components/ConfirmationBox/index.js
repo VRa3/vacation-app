@@ -32,7 +32,7 @@ class ConfirmationBox extends React.Component {
 
                 <Navigation>
                     <Link to="/">Start again</Link>
-                    <Link to="/confirm">Confirm</Link>
+                    <Link to="/panel-box">Confirm</Link>
                 </Navigation>
             </div>
         )

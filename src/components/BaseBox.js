@@ -2,7 +2,8 @@ import React from 'react';
 import AvatarBox from './AvatarBox/'
 import InputBox from './InputBox/'
 import ConfirmationBox from './ConfirmationBox/'
-import ErrorBox from './ErrorBox'
+import ErrorBox from './ErrorBox/'
+import PanelBox from './PanelBox/'
 import { Route, Switch } from 'react-router-dom'
 import {
     CSSTransition,
@@ -88,6 +89,10 @@ class BaseBox extends React.Component {
                                                 <Route
                                                     path="/confirm"
                                                     render={()=> <ConfirmationBox name={this.state.userName} gender={this.state.userGender}/>}
+                                                />
+                                                <Route
+                                                    path="/panel-box"
+                                                    render={()=> <PanelBox name={this.state.userName} gender={this.state.userGender}/>}
                                                 />
                                             </Switch>
                                         )}
