@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/vacation-app/static/css/main.6b978d23.chunk.css",
-    "main.js": "/vacation-app/static/js/main.6f20cc95.chunk.js",
-    "main.js.map": "/vacation-app/static/js/main.6f20cc95.chunk.js.map",
+    "main.js": "/vacation-app/static/js/main.d8c9bc39.chunk.js",
+    "main.js.map": "/vacation-app/static/js/main.d8c9bc39.chunk.js.map",
     "runtime~main.js": "/vacation-app/static/js/runtime~main.2245c64e.js",
     "runtime~main.js.map": "/vacation-app/static/js/runtime~main.2245c64e.js.map",
     "static/js/2.d812f8a7.chunk.js": "/vacation-app/static/js/2.d812f8a7.chunk.js",
     "static/js/2.d812f8a7.chunk.js.map": "/vacation-app/static/js/2.d812f8a7.chunk.js.map",
     "index.html": "/vacation-app/index.html",
-    "precache-manifest.b402abe3c7e4bd026f4e89dc36a2c22e.js": "/vacation-app/precache-manifest.b402abe3c7e4bd026f4e89dc36a2c22e.js",
+    "precache-manifest.12d5aea8eba535ac2650a83819b14662.js": "/vacation-app/precache-manifest.12d5aea8eba535ac2650a83819b14662.js",
     "service-worker.js": "/vacation-app/service-worker.js",
     "static/css/main.6b978d23.chunk.css.map": "/vacation-app/static/css/main.6b978d23.chunk.css.map",
     "static/media/man.svg": "/vacation-app/static/media/man.8bfd79fb.svg",
