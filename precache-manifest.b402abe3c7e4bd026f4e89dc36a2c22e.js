@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8bba43ab253cb29df23116b330da4788",
+    "revision": "ba62c09aa31c6cf2a8021358db8855ae",
     "url": "/vacation-app/index.html"
   },
   {
-    "revision": "3846bd11d7a72adfb712",
+    "revision": "73117e8c73696899a6fb",
     "url": "/vacation-app/static/css/main.6b978d23.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vacation-app/static/js/2.d812f8a7.chunk.js"
   },
   {
-    "revision": "3846bd11d7a72adfb712",
-    "url": "/vacation-app/static/js/main.e2f3e92e.chunk.js"
+    "revision": "73117e8c73696899a6fb",
+    "url": "/vacation-app/static/js/main.6f20cc95.chunk.js"
   },
   {
     "revision": "24035158280b1c2b9960",
