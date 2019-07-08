@@ -2,14 +2,8 @@
   position: fixed;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 100%);
-  transition: transform 1s;
   padding: $spacing-base;
   width: 75%;
   background: rgba(setColor(custom, g-plus), 0.8);
   color: $white;
-
-  &.show {
-    transform: translate(-50%, 0);
-  }
 }

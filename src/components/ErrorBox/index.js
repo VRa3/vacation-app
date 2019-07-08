@@ -1,27 +1,22 @@
 import React from 'react';
+import { Transition } from 'react-transition-group';
+
+const duration = 500;
+
+const defaultStyle = {
+    transform: `translate(-50%, 100%)`,
+    transition: `transform ${duration}ms ease-in-out`
+};
+
+const transitionStyles = {
+    entering: { transform: `translate(-50%, 100%)` },
+    entered:  { transform: `translate(-50%, 0)` },
+    exiting:  { transform: `translate(-50%, 100%)` },
+    exited:  { transform: `translate(-50%, 0)` },
+};
+
 
 class ErrorBox extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.errorBoxRef = React.createRef();
-
-        this.timeout = null;
-    }
-
-    componentDidMount() {
-        this.timeout = setTimeout(() => {
-            this.errorBoxRef.current.classList.add('show')
-        }, 1);
-
-        this.timeout = setTimeout(() => {
-            this.errorBoxRef.current.classList.remove('show')
-        }, 3000);
-    }
-
-    componentWillUnmount() {
-        clearTimeout(this.timeout)
-    }
 
     render() {
         let message = 'error';
@@ -44,9 +39,22 @@ class ErrorBox extends React.Component {
 
         return (
             <>
-                <div ref={this.errorBoxRef} className='error-box'>
-                    {message}
-                </div>
+                <Transition unmountOnExit={true} in={this.props.showError} timeout={{
+                    appear: 500,
+                    enter: 300,
+                    exit: 500,
+                }}>
+                    {state => (
+                        <div style={{
+                            ...defaultStyle,
+                            ...transitionStyles[state]
+                        }}
+                             className='error-box'
+                        >
+                            {message}
+                        </div>
+                    )}
+                </Transition>
             </>
         )
     }

@@ -56,17 +56,6 @@ class BaseBox extends React.Component {
     };
 
     render() {
-        console.log(this.state);
-
-        const showErrorBox = () => {
-            const {errorType, showError} = this.state;
-
-            if (errorType !== 0 && showError) {
-                return <ErrorBox showError={showError} errorType={errorType} />
-            } else {
-                return null;
-            }
-        };
 
         return (
             <section className='base-box'>
@@ -110,7 +99,7 @@ class BaseBox extends React.Component {
                     }
                 />
 
-                {showErrorBox()}
+                <ErrorBox showError={this.state.showError} errorType={this.state.errorType}/>
             </section>
         )
     }

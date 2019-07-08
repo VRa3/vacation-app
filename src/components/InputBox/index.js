@@ -14,10 +14,13 @@ class nameBox extends React.Component {
     sendUserData = e => {
         const {name} = this.state;
         const {sendUserData, checkErrors} = this.props;
+        const regExp = /^[A-Z]/i;
 
         sendUserData(name);
 
-        if (name === '') {
+        const isValid = regExp.test(name);
+
+        if (name.length < 3 && !isValid ) {
             e.preventDefault();
             checkErrors(2);
         } else {
