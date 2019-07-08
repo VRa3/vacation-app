@@ -5,7 +5,7 @@ const duration = 500;
 
 const defaultStyle = {
     transform: `translate(-50%, 100%)`,
-    transition: `transform ${duration}ms ease-in-out`
+    transition: `transform ${duration}ms ease-in-out, background ${duration}ms`
 };
 
 const transitionStyles = {
@@ -21,12 +21,15 @@ class ErrorBox extends React.Component {
     render() {
         let message = 'error';
 
+        let errorBoxClass = 'error-box';
+
         const checkError = () => {
             const error = this.props.errorType;
 
             switch(error) {
                 case 0:
                     message = 'Thank You';
+                    errorBoxClass = 'error-box error-box--success';
                     break;
                 case 1:
                     message = 'First choose your avatar';
@@ -48,7 +51,7 @@ class ErrorBox extends React.Component {
                             ...defaultStyle,
                             ...transitionStyles[state]
                         }}
-                             className='error-box'
+                             className={errorBoxClass}
                         >
                             {message}
                         </div>

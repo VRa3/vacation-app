@@ -6,4 +6,8 @@
   width: 75%;
   background: rgba(setColor(custom, g-plus), 0.8);
   color: $white;
+
+  &--success {
+    background: rgba(setColor(custom, positive), 0.8);
+  }
 }
