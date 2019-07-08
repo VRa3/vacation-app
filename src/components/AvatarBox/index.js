@@ -59,7 +59,7 @@ class AvatarBox extends React.Component {
                     {AvatarsList()}
                 </div>
 
-                <Navigation>
+                <Navigation paddingTopBig>
                     <Link onClick={this.sendUserData} className="ml-auto" to="/name">Next</Link>
                 </Navigation>
             </div>

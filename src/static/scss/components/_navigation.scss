@@ -2,4 +2,8 @@
   display: flex;
   justify-content: space-between;
   padding-top: $spacing-base;
+
+  &--pt-big {
+    padding-top: 2 * $spacing-base;
+  }
 }

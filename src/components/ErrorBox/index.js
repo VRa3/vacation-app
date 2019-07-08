@@ -25,6 +25,9 @@ class ErrorBox extends React.Component {
             const error = this.props.errorType;
 
             switch(error) {
+                case 0:
+                    message = 'Thank You';
+                    break;
                 case 1:
                     message = 'First choose your avatar';
                     break;
@@ -39,11 +42,7 @@ class ErrorBox extends React.Component {
 
         return (
             <>
-                <Transition unmountOnExit={true} in={this.props.showError} timeout={{
-                    appear: 500,
-                    enter: 300,
-                    exit: 500,
-                }}>
+                <Transition unmountOnExit={true} in={this.props.showError} timeout={duration}>
                     {state => (
                         <div style={{
                             ...defaultStyle,

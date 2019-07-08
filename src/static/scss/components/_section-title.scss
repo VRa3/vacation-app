@@ -1,4 +1,8 @@
 .section-title {
-  margin-bottom: 30px;
+  margin-bottom: 2 * $spacing-base;
   text-align: center;
+
+  &--mb-small {
+    margin-bottom: $spacing-base;
+  }
 }

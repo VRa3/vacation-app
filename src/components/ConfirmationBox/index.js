@@ -19,7 +19,7 @@ class ConfirmationBox extends React.Component {
 
         return (
             <div className='page'>
-                <h5 className="section-title section-title--mb-big">
+                <h5 className="section-title section-title--mb-small">
                     Is this correct?
                 </h5>
 
