@@ -9,6 +9,8 @@ import {
     TransitionGroup
 } from 'react-transition-group';
 
+const path = process.env.PUBLIC_URL;
+
 class BaseBox extends React.Component {
     constructor(props) {
         super(props);
@@ -78,15 +80,15 @@ class BaseBox extends React.Component {
                                             <Switch>
                                                 <Route
                                                     exact
-                                                    path="/"
+                                                    path={`${path}/`}
                                                     render={()=> <AvatarBox checkErrors={this.checkErrors} sendUserData={this.setUserGender}/>}
                                                 />
                                                 <Route
-                                                    path="/name"
+                                                    path={`${path}/name`}
                                                     render={()=> <InputBox checkErrors={this.checkErrors} sendUserData={this.setUserName}/>}
                                                 />
                                                 <Route
-                                                    path="/confirm"
+                                                    path={`${path}/confirm`}
                                                     render={()=> <ConfirmationBox name={this.state.userName} gender={this.state.userGender}/>}
                                                 />
                                             </Switch>
