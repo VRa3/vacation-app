@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/VRa3/vacation-app/static/css/main.6b978d23.chunk.css",
+    "main.js": "/VRa3/vacation-app/static/js/main.6c46a87d.chunk.js",
+    "main.js.map": "/VRa3/vacation-app/static/js/main.6c46a87d.chunk.js.map",
+    "runtime~main.js": "/VRa3/vacation-app/static/js/runtime~main.d8aeb974.js",
+    "runtime~main.js.map": "/VRa3/vacation-app/static/js/runtime~main.d8aeb974.js.map",
+    "static/js/2.d812f8a7.chunk.js": "/VRa3/vacation-app/static/js/2.d812f8a7.chunk.js",
+    "static/js/2.d812f8a7.chunk.js.map": "/VRa3/vacation-app/static/js/2.d812f8a7.chunk.js.map",
+    "index.html": "/VRa3/vacation-app/index.html",
+    "precache-manifest.59e8b1a74b58b74485b8ad715228d828.js": "/VRa3/vacation-app/precache-manifest.59e8b1a74b58b74485b8ad715228d828.js",
+    "service-worker.js": "/VRa3/vacation-app/service-worker.js",
+    "static/css/main.6b978d23.chunk.css.map": "/VRa3/vacation-app/static/css/main.6b978d23.chunk.css.map",
+    "static/media/man.svg": "/VRa3/vacation-app/static/media/man.8bfd79fb.svg",
+    "static/media/woman.svg": "/VRa3/vacation-app/static/media/woman.9e32ff17.svg"
+  }
+}
