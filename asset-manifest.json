@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/vacation-app/static/css/main.b9766dd8.chunk.css",
-    "main.js": "/vacation-app/static/js/main.a43098a7.chunk.js",
-    "main.js.map": "/vacation-app/static/js/main.a43098a7.chunk.js.map",
+    "main.css": "/vacation-app/static/css/main.eea7a188.chunk.css",
+    "main.js": "/vacation-app/static/js/main.0ff874f3.chunk.js",
+    "main.js.map": "/vacation-app/static/js/main.0ff874f3.chunk.js.map",
     "runtime~main.js": "/vacation-app/static/js/runtime~main.2245c64e.js",
     "runtime~main.js.map": "/vacation-app/static/js/runtime~main.2245c64e.js.map",
-    "static/js/2.d812f8a7.chunk.js": "/vacation-app/static/js/2.d812f8a7.chunk.js",
-    "static/js/2.d812f8a7.chunk.js.map": "/vacation-app/static/js/2.d812f8a7.chunk.js.map",
+    "static/js/2.5dd3126f.chunk.js": "/vacation-app/static/js/2.5dd3126f.chunk.js",
+    "static/js/2.5dd3126f.chunk.js.map": "/vacation-app/static/js/2.5dd3126f.chunk.js.map",
     "index.html": "/vacation-app/index.html",
-    "precache-manifest.7f3b8eb8e7a270c7e3387ab25ea3765e.js": "/vacation-app/precache-manifest.7f3b8eb8e7a270c7e3387ab25ea3765e.js",
+    "precache-manifest.6646c0c9fb5490d894d728e4464757f5.js": "/vacation-app/precache-manifest.6646c0c9fb5490d894d728e4464757f5.js",
     "service-worker.js": "/vacation-app/service-worker.js",
-    "static/css/main.b9766dd8.chunk.css.map": "/vacation-app/static/css/main.b9766dd8.chunk.css.map",
+    "static/css/main.eea7a188.chunk.css.map": "/vacation-app/static/css/main.eea7a188.chunk.css.map",
     "static/media/man.svg": "/vacation-app/static/media/man.8bfd79fb.svg",
     "static/media/woman.svg": "/vacation-app/static/media/woman.9e32ff17.svg"
   }
